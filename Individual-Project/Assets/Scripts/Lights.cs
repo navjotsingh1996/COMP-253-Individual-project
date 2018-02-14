@@ -1,16 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿namespace VRTK.Examples
+{
+    using UnityEngine;
+    using UnityEventHelper;
 
-public class Lights : MonoBehaviour {
+    public class Lights : MonoBehaviour
+    {
+        public GameObject Light;
+        public enum switchState { ON, OFF };
+        public switchState ss;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        private VRTK_Button_UnityEvents buttonEvents;
+
+        private void Start()
+        {
+            buttonEvents = GetComponent<VRTK_Button_UnityEvents>();
+            if (buttonEvents == null)
+            {
+                buttonEvents = gameObject.AddComponent<VRTK_Button_UnityEvents>();
+            }
+            buttonEvents.OnPushed.AddListener(handlePush);
+        }
+
+        private void handlePush(object sender, Control3DEventArgs e)
+        {
+            VRTK_Logger.Info("Pushed");
+            Light.SetActive(ss == switchState.ON);
+        }
+    }
 }
