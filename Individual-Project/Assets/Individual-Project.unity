@@ -909,6 +909,7 @@ MonoBehaviour:
   Equations:
   - {fileID: 906533331}
   - {fileID: 168103702}
+  - {fileID: 748164302}
   CardSlots:
   - {fileID: 2117418552}
   - {fileID: 47505372}
@@ -920,14 +921,13 @@ MonoBehaviour:
   - {fileID: 449260274}
   - {fileID: 956379778}
   - {fileID: 2143663954}
+  - {fileID: 145239672}
   SpecialEquations:
   - {fileID: 710032610}
   - {fileID: 2104795307}
-  - {fileID: 748164302}
   SpecialCardSlots:
   - {fileID: 491638002}
   - {fileID: 1125220916}
-  - {fileID: 145239672}
 --- !u!1 &380982614 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5a02f97198f821d4faebc27bb7445b68, type: 3}
@@ -4484,8 +4484,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317593879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.585, y: -3.87, z: 0.248}
-  m_LocalScale: {x: 1, y: 1, z: 1.5}
+  m_LocalPosition: {x: -10.554, y: -3.934, z: 0.248}
+  m_LocalScale: {x: 1.2, y: 1, z: 1.8}
   m_Children:
   - {fileID: 178781850}
   m_Father: {fileID: 0}

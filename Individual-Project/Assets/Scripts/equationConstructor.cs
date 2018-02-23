@@ -19,7 +19,7 @@ public class equationConstructor : MonoBehaviour {
             if (alreadyExists(x, csIndexes))
             {
                 i--;
-            }
+            } else { csIndexes[i] = x; }
         }
 
         for (int i = 0; i < CardSlots.Length; i++)
