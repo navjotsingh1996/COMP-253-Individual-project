@@ -22,11 +22,10 @@ GameObject:
   - component: {fileID: 33982734269183194}
   - component: {fileID: 65481517676375502}
   - component: {fileID: 23016236583502918}
-  - component: {fileID: 54933542220289710}
   - component: {fileID: 114023331564326184}
   m_Layer: 0
   m_Name: Indicator
-  m_TagString: Card Slot
+  m_TagString: Indicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831483855097514}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.0026653765, y: 1.3267841, z: 0.31839156}
-  m_LocalScale: {x: 0.089032516, y: 0.06208921, z: 0.030409865}
+  m_LocalPosition: {x: 0.30670375, y: 0.41968518, z: 0.023361415}
+  m_LocalScale: {x: 0.08903251, y: 0.06208921, z: 0.030409865}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,7 +52,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,7 +67,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -85,21 +82,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831483855097514}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54933542220289710
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831483855097514}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &65481517676375502
 BoxCollider:
   m_ObjectHideFlags: 1

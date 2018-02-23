@@ -4,16 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cubes
-  - Spheres
-  - Leg
-  - Arm
-  - Saucers
-  - Torso
-  - OtherSaucers
   - Card Slot
-  - Equation Base
   - Equation Drop
+  - Equation Base
+  - Indicator
   layers:
   - Default
   - TransparentFX
