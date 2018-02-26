@@ -25,7 +25,7 @@ public class TutorialScript : MonoBehaviour {
         if (wrong)
         {
             CorrectCard.SetActive(true);
-            Instructions.text = "Now try the other card";
+            Instructions.text = "hmmm, that didn't \n do it. Lets try\n the other card";
         }
         GameObject card = Equation.GetComponentInChildren<VRTK.VRTK_SnapDropZone>().GetCurrentSnappedObject();
         if (card != null)
@@ -33,7 +33,7 @@ public class TutorialScript : MonoBehaviour {
             if (card.GetComponent<CardData>().value == Equation.GetComponent<AnswerData>().value)
             {
                 Indicator.GetComponent<MeshRenderer>().material = Indicator.GetComponent<ColorScript>().success;
-                Instructions.text = "Looks like you are read";
+                Instructions.text = "You are good to go";
                 Invoke("loadGame", 3);
             }
             else

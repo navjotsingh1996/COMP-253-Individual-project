@@ -16,7 +16,12 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if (mainDoor == null)
         {
-            SceneManager.LoadScene("Game Over");
+            Invoke("GO", 3);
         }
 	}
+
+    void GO ()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
 }

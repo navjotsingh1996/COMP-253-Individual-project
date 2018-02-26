@@ -40,18 +40,24 @@ public class equationConstructor : MonoBehaviour {
             Text specialEquationText = SpecialEquations[i].GetComponentInChildren<Text>();
             setUp(SpecialCardSlots[i], SpecialEquations[i], specialEquationText);
         }
+
+        if (SpecialCardSlots.Length > SpecialEquations.Length)
+        {
+            for (int i = SpecialEquations.Length; i < SpecialCardSlots.Length;i++)
+            {
+                SpecialCardSlots[i].GetComponent<CardData>().value = Random.Range(-99, 99);
+            }
+        }
     }
 
     void setUp(GameObject cs, GameObject eq, Text eqTxt)
     {
-        Debug.Log(cs.name);
         int op = Random.Range(0, 1);
         int unknown = Random.Range(0, 2);
         int num1 = Random.Range(0, 99);
         int num2 = Random.Range(0, 99);
         string equation = makeEquation(op, unknown, num1, num2);
         int sol = getSolution(op, unknown, num1, num2);
-        Debug.Log(sol);
         eqTxt.text = equation;
         eq.GetComponent<AnswerData>().value = sol;
         cs.GetComponent<CardData>().value = sol;

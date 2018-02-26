@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Card Slot
-  - Equation Drop
-  - Equation Base
-  - Indicator
+  tags: []
   layers:
   - Default
   - TransparentFX
