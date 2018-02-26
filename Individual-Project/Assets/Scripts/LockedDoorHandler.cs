@@ -7,19 +7,33 @@ public class LockedDoorHandler : MonoBehaviour {
     public GameObject [] Indicators;
     public GameObject[] Equations;
     public GameObject Door;
+
+    bool[] solvedEquations;
     int problems;
-    int correctAns = 0;
 	// Use this for initialization
 	void Start () {
         problems = Equations.Length;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (problems == correctAns)
+        solvedEquations = new bool[problems];
+        for(int i = 0;i< problems; i++)
+        {
+            solvedEquations[i] = false;
+        }
+    }
+
+    bool allEqSolved()
+    {
+        for (int i =0;i< problems; i++)
+        {
+            if (!solvedEquations[i]) { return false; }
+        }
+        return true;
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (allEqSolved())
         {
             Destroy(Door);
-            problems = 0;
         }
 		for (int i = 0; i < problems; i++)
         {
@@ -29,11 +43,11 @@ public class LockedDoorHandler : MonoBehaviour {
             {
                 if (card.GetComponent<CardData>().value == equation.GetComponent<AnswerData>().value)
                 {
-                    correctAns++;
+                    solvedEquations[i] = true;
                     Indicators[i].GetComponent<MeshRenderer>().material = Indicators[i].GetComponent<ColorScript>().success;
                 } else
                 {
-                    correctAns--;
+                    solvedEquations[i] = false;
                     Indicators[i].GetComponent<MeshRenderer>().material = Indicators[i].GetComponent<ColorScript>().failure;
                 }
             } else
